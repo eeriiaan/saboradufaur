@@ -1,0 +1,513 @@
+/* Variables de color para facilitar cambios */
+:root {
+    --color-primario: #004d00;
+    --color-secundario: #ffcc00;
+    --color-fondo: #f4f4f4;
+    --color-texto: #333;
+}
+
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+header {
+    background-color: var(--color-primario);
+    padding: 10px 0;
+    color: #fff;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Estilo para el enlace activo */
+nav ul li a.active {
+    color: var(--color-secundario); /* Amarillo */
+    font-weight: bold; /* Opción para que se vea más destacado */
+}
+
+.nosotros {
+    text-align: center;
+}
+
+
+.hero {
+    background: url('imagenes/pngtree-argentine-folklore-concept-mate-and-guitar-on-a-black-background-photo-photo-image_32189280.jpg') no-repeat center center/cover;
+    height: 30em; /* Ajusta la altura del contenedor en unidades em */
+    min-height: 15em; /* Establece una altura mínima en em para que no quede demasiado pequeño */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 2em; /* Ajuste de padding en em */
+}
+
+
+.hero h2 {
+    font-size: 3rem;
+}
+
+.cta-button {
+    background-color: var(--color-secundario);
+    color: var(--color-texto);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e6b800;
+}
+
+/* Productos */
+.productos {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.product-item {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+}
+
+.product-item img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-item img:hover {
+    transform: scale(1.05);
+}
+
+.product-item h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.product-item p {
+    font-size: 1rem;
+}
+
+/* Botón Comprar */
+.product-item button {
+    margin-top: auto;
+    padding: 10px 20px;
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.product-item button:hover {
+    background-color: #003300;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer .social-icons a {
+    margin: 0 10px;
+    color: white;
+}
+
+footer .social-icons img {
+    width: 30px;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 600px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero {
+        height: 300px;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-button {
+        padding: 8px 15px;
+    }
+}
+
+/* Estilo para las categorías */
+.category {
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.category h3 {
+    font-size: 1.8rem;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.category .more-link {
+    font-size: 1rem;
+    color: var(--color-primario);
+    text-decoration: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.category .more-link:hover {
+    text-decoration: underline;
+}
+
+/* Estilos generales del grid de productos */
+.categorymates {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.categorymates h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.product-grid {
+    display: flex;
+    gap: 20px; /* Espacio entre productos */
+    justify-content: center; /* Centrar productos */
+    flex-wrap: wrap;
+}
+
+.product-item {
+    flex: 1 1 200px; /* Tamaño fijo para cada tarjeta */
+    max-width: 200px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.product-item h4 {
+    font-size: 1.2em;
+    margin: 10px 0 5px;
+    color: #555;
+}
+
+.product-item p {
+    font-size: 1.1em;
+    color: #888;
+}
+
+.product-item button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.product-item button:hover {
+    background-color: #45a049;
+}
+
+
+@media (max-width: 768px) {
+    .grilla {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Estilos para el título del formulario */
+.contacto {
+    max-width: 600px; /* Ancho máximo del formulario */
+    margin: 0 auto; /* Centrar el formulario */
+    padding: 20px; /* Espaciado interno */
+    background-color: #f9f9f9; /* Color de fondo */
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.contacto h2 {
+    text-align: center; /* Centrar el título */
+    color: #333; /* Color del texto */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Espaciado entre grupos de formulario */
+}
+
+label {
+    display: block; /* Asegura que las etiquetas ocupen toda la línea */
+    margin-bottom: 5px; /* Espacio debajo de la etiqueta */
+    font-weight: bold; /* Negrita */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 5px; /* Esquinas redondeadas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: border-color 0.3s; /* Transición al enfocar */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #004d00; /* Cambiar color del borde al enfocar */
+    outline: none; /* Sin contorno */
+}
+
+.submit-button {
+    background-color: #004d00; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Esquinas redondeadas */
+    padding: 10px 20px; /* Espaciado interno */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+    transition: background-color 0.3s; /* Transición suave */
+    width: 100%; /* Botón ocupa todo el ancho */
+}
+
+.submit-button:hover {
+    background-color: #005700; /* Cambia el color al pasar el ratón */
+}
+/*imagen sol*/
+.imagen-ancha {
+    width: 100%;
+    height: auto; /* Mantiene la proporción */
+}
+
+
+/* Sección de reseñas */
+.resenas {
+    padding: 40px 20px;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.resenas h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Configuración de la cuadrícula */
+.resenas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Estilo de cada tarjeta de reseña */
+.resena-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.resena-item p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.resena-item h4 {
+    font-size: 1rem;
+    color: #004d00;
+    text-align: right;
+    font-weight: bold;
+}
+
+/* Sección del pueblo turístico */
+.puebloturistico {
+    max-width: 800px;
+    margin: 40px auto; /* Más margen para separación del fondo */
+    padding: 20px;
+    background-color: #ffffff; /* Fondo blanco para destacar como tarjeta */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más fuerte para efecto flotante */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para efecto hover */
+}
+
+.puebloturistico:hover {
+    transform: translateY(-10px); /* Efecto de elevación en hover */
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.3); /* Sombra más fuerte al hacer hover */
+}
+
+.puebloturistico h2 {
+    font-size: 2em;
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.puebloturistico p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+    text-align: justify;
+}
+
+
+/* Estilos para la sección de imagen y mapa */
+.puebloimagen {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Espacio entre los cuadros, si lo deseas */
+}
+
+.card {
+    flex: 1 1 25%; /* Cada tarjeta ocupará un cuarto del ancho */
+    box-sizing: border-box;
+}
+
+.card img,
+.card iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.imagenguarda {
+    background-image: url('imagenes/guardapampa.webp');
+    background-repeat: repeat; /* Repite la imagen */
+    }
+
+    #gif-promocional {
+        text-align: center;
+        padding: 20px;
+    }
+    
+    #gif-promocional img {
+        width: 100%;
+        max-width: 600px; /* Limita el tamaño máximo del GIF */
+        height: auto; /* Mantiene la proporción del GIF */
+        border-radius: 8px; /* Bordes redondeados opcionales */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra opcional */
+    }
+    
+   .contacto-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.contacto-imagen {
+    flex: 1;
+}
+
+.contacto-imagen img {
+    width: 100%;
+    height: auto;
+
+}
+
+.contacto-formulario {
+    flex: 1;
+}
+
+.contacto h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.imagen-ancha{
+    display: block;
+    margin: 0 auto; /* Centra horizontalmente */
+    width: 50%; /* Ajustá el ancho según necesites */
+    height: auto; /* Mantiene la proporción */
+}
+
+/* Fin del CSS */
