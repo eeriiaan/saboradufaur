@@ -4,232 +4,333 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Sabor a Dufaur - El auténtico sabor del campo argentino, mate, yerba y más.">
-    <link rel="icon" href="img/favicon.png" type="image/png"> 
+    <link rel="icon" href="imagenes/favicon.png" type="image/png"> 
     <title>Sabor a Dufaur</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style-duf.css">
 </head>
-<body>
+<body class="contact-page">
     <header>
         <h1>Sabor a Dufaur</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="mates.html">Mates</a></li>
-                <li><a href="bombillas.html">Bombillas</a></li>
-                <li><a href="termos.html">Termos</a></li>
-                <li><a href="yerba.html">Yerba</a></li>
-                <li><a href="dispenser.html">Dispenser</a></li>
-                <li><a href="bolsos.html">Bolsos</a></li>
+                <li><a href="productos.html" class="active">Productos</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html" >Contacto</a></li>
             </ul>
         </nav>
         <div class="imagenguarda">
             <img src="imagenes/guardapampa.webp" alt="guardapampa">
         </div>
+        <!-- Carrito de compras -->
+        <div id="cart-container">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-count">0</span>
+        </div>
     </header>
 
+    <main>
+        <div id="productos-listado"></div>
+    
     <!-- Secciones de Productos por Categoría -->
     <section id="productos" class="productos">
         <h2>Nuestros Productos</h2>
-
+<br>
+<br>
         <!-- Categoría Mates -->
         <div class="categorymates">
-            <h3><a href="mates.html" class="more-link">Mates</a></h3>
+            <h3><a>Mates</a></h3>
             <div class="product-grid">
                 <!-- Muestra cuatro productos de Mates -->
                 <div class="product-item">
                     <img src="imagenes/mate1.webp" alt="Mate 1">
                     <h4>Mate Artesanal 1</h4>
                     <p>$13.499</p>
-                    <button>Comprar</button>
+                    <button class="buy-button">
+                        <i class="fas fa-shopping-cart"></i> Comprar
+                    </button>
                 </div>
                 <div class="product-item">
                     <img src="imagenes/mate5.webp" alt="Mate 5">
                     <h4>Mate Artesanal 2</h4>
                     <p>$14.199</p>
-                    <button>Comprar</button>
+                    <button class="buy-button">
+                        <i class="fas fa-shopping-cart"></i> Comprar
+                    </button>
                 </div>
                 <div class="product-item">
                     <img src="imagenes/mate3.webp" alt="Mate 3">
                     <h4>Mate Artesanal 3</h4>
                     <p>$15.999</p>
-                    <button>Comprar</button>
+                    <button class="buy-button">
+                        <i class="fas fa-shopping-cart"></i> Comprar
+                    </button>
                 </div>
                 <div class="product-item">
                     <img src="imagenes/mate 7.webp" alt="Mate 4">
                     <h4>Mate Artesanal 4</h4>
                     <p>$12.999</p>
-                    <button>Comprar</button>
+                    <button class="buy-button">
+                        <i class="fas fa-shopping-cart"></i> Comprar
+                    </button>
                 </div>
             </div>
         </div>
-
+<br>
+<br>
        <!-- Categoría bombillas-->
        <div class="categorybombillas">
-        <h3><a href="bombillas.html" class="more-link">Bombillas</a></h3>
+        <h3><a>Bombillas</a></h3>
         <div class="product-grid">
             <!-- Muestra cuatro productos de bombillas-->
             <div class="product-item">
                 <img src="imagenes/bombillapatagonia.jpg" alt="bombilla 1">
                 <h4>Bombilla Patagonia</h4>
                 <p>$13.499</p>
-                <button>Comprar</button>
+                <button class="buy-button">
+                    <i class="fas fa-shopping-cart"></i> Comprar
+                </button>
             </div>
             <div class="product-item">
                 <img src="imagenes/bombillacuchara.jpg" alt="bombilla 2">
                 <h4>Bombilla Cuchara</h4>
                 <p>$14.199</p>
-                <button>Comprar</button>
+                <button class="buy-button">
+                    <i class="fas fa-shopping-cart"></i> Comprar
+                </button>
             </div>
             <div class="product-item">
                 <img src="imagenes/bombillasierra.jpg" alt="bombillas 3">
                 <h4>Bombilla Sierra</h4>
                 <p>$15.999</p>
-                <button>Comprar</button>
+                <button class="buy-button">
+                    <i class="fas fa-shopping-cart"></i> Comprar
+                </button>
             </div>
             <div class="product-item">
                 <img src="imagenes/bombilla 4.webp" alt="Mate 4">
                 <h4>Bombilla Pico de Loro</h4>
                 <p>$12.999</p>
-                <button>Comprar</button>
+                <button class="buy-button">
+                    <i class="fas fa-shopping-cart"></i> Comprar
+                </button>
             </div>
         </div>
     </div>
+<br>
+<br>
 
     <!-- Categoría Termos-->
 <div class="categorytermos">
-    <h3><a href="termos.html" class="more-link">Termos</a></h3>
+    <h3><a>Termos</a></h3>
     <div class="product-grid">
         <!-- Muestra cuatro productos de Termos-->
         <div class="product-item">
             <img src="imagenes/termo-750-charcoal.png" alt="Termo 1">
             <h4>Termo 1</h4>
             <p>$13.499</p>
-            <button>Comprar</button>
+            <button class="buy-button">
+                <i class="fas fa-shopping-cart"></i> Comprar
+            </button>
         </div>
         <div class="product-item">
             <img src="imagenes/stanleynegro.jpg" alt="Termo 2">
             <h4>Termo 2</h4>
             <p>$14.199</p>
-            <button>Comprar</button>
+            <button class="buy-button">
+                <i class="fas fa-shopping-cart"></i> Comprar
+            </button>
         </div>
         <div class="product-item">
             <img src="imagenes/termo-acero-1lt-.webp" alt="Termo 3">
             <h4>Termo 3</h4>
             <p>$15.999</p>
-            <button>Comprar</button>
+            <button class="buy-button">
+                <i class="fas fa-shopping-cart"></i> Comprar
+            </button>
         </div>
         <div class="product-item">
             <img src="imagenes/termo-roma-verde.webp" alt="Termo 4">
             <h4>Termo 4</h4>
             <p>$12.999</p>
-            <button>Comprar</button>
+            <button class="buy-button">
+                <i class="fas fa-shopping-cart"></i> Comprar
+            </button>
         </div>
     </div>
 </div>
 
+<br>
+<br>
 
       <!-- Categoría Yerbas -->
 <div class="categoryyerbas">
-    <h3><a href="yerbas.html" class="more-link">Yerbas</a></h3>
+    <h3><a>Yerbas</a></h3>
     <div class="product-grid">
         <div class="product-item">
             <img src="imagenes/ym-romance-especial-1kg-00-fw1-f69f3e990051df9bab16727577539677-640-0.jpg" alt="Yerba 1">
             <h4>Yerba 1</h4>
             <p>$13.499</p>
-            <button>Comprar</button>
+            <button class="buy-button">
+                <i class="fas fa-shopping-cart"></i> Comprar
+            </button>
         </div>
         <div class="product-item">
             <img src="imagenes/taragui.png" alt="Yerba 2">
             <h4>Yerba 2</h4>
             <p>$14.199</p>
-            <button>Comprar</button>
+            <button class="buy-button">
+                <i class="fas fa-shopping-cart"></i> Comprar
+            </button>
         </div>
         <div class="product-item">
             <img src="imagenes/Yerba-Mate-Con-Palo-Barbacua-Kalena-500g.webp" alt="Yerba 3">
             <h4>Yerba 3</h4>
             <p>$15.999</p>
-            <button>Comprar</button>
+            <button class="buy-button">
+                <i class="fas fa-shopping-cart"></i> Comprar
+            </button>
         </div>
         <div class="product-item">
             <img src="imagenes/playadito.webp" alt="Yerba 4">
             <h4>Yerba 4</h4>
             <p>$12.999</p>
-            <button>Comprar</button>
+            <button class="buy-button">
+                <i class="fas fa-shopping-cart"></i> Comprar
+            </button>
         </div>
     </div>
 </div>
+<br>
+<br>
 
 <!-- Categoría Dispenser -->
 <div class="categorydispenser">
-    <h3><a href="dispenser.html" class="more-link">Dispenser</a></h3>
+    <h3><a>Dispenser</a></h3>
     <div class="product-grid">
         <div class="product-item">
             <img src="imagenes/yerberaazucarera.webp" alt="Dispenser 1">
             <h4>Dispenser 1</h4>
             <p>$13.499</p>
-            <button>Comprar</button>
+            <button class="buy-button">
+                <i class="fas fa-shopping-cart"></i> Comprar
+            </button>
         </div>
         <div class="product-item">
             <img src="imagenes/yerberaazucarera2.webp" alt="Dispenser 2">
             <h4>Dispenser 2</h4>
             <p>$14.199</p>
-            <button>Comprar</button>
+            <button class="buy-button">
+                <i class="fas fa-shopping-cart"></i> Comprar
+            </button>
         </div>
         <div class="product-item">
             <img src="imagenes/yerberaazucarera3.webp" alt="Dispenser 3">
             <h4>Dispenser 3</h4>
             <p>$15.999</p>
-            <button>Comprar</button>
+            <button class="buy-button">
+                <i class="fas fa-shopping-cart"></i> Comprar
+            </button>
         </div>
         <div class="product-item">
             <img src="imagenes/yerberaazucarera4.jpg" alt="Dispenser 4">
             <h4>Dispenser 4</h4>
             <p>$12.999</p>
-            <button>Comprar</button>
+            <button class="buy-button">
+                <i class="fas fa-shopping-cart"></i> Comprar
+            </button>
         </div>
     </div>
 </div>
+<br>
+<br>
 
 <!-- Categoría Bolsos Materos -->
 <div class="categorybolsos">
-    <h3><a href="bolsos.html" class="more-link">Bolsos Materos</a></h3>
+    <h3><a>Bolsos Materos</a></h3>
     <div class="product-grid">
         <div class="product-item">
             <img src="imagenes/bolso3.webp" alt="Bolso Matero 1">
             <h4>Bolso Matero 1</h4>
             <p>$13.499</p>
-            <button>Comprar</button>
+            <button class="buy-button">
+                <i class="fas fa-shopping-cart"></i> Comprar
+            </button>
         </div>
         <div class="product-item">
             <img src="imagenes/bolso4.webp" alt="Bolso Matero 2">
             <h4>Bolso Matero 2</h4>
             <p>$14.199</p>
-            <button>Comprar</button>
+            <button class="buy-button">
+                <i class="fas fa-shopping-cart"></i> Comprar
+            </button>
         </div>
         <div class="product-item">
             <img src="imagenes/bolso5.webp" alt="Bolso Matero 3">
             <h4>Bolso Matero 3</h4>
             <p>$15.999</p>
-            <button>Comprar</button>
+            <button class="buy-button">
+                <i class="fas fa-shopping-cart"></i> Comprar
+            </button>
         </div>
         <div class="product-item">
             <img src="imagenes/bolso6.webp" alt="Bolso Matero 4">
             <h4>Bolso Matero 4</h4>
             <p>$12.999</p>
-            <button>Comprar</button>
+            <button class="buy-button">
+                <i class="fas fa-shopping-cart"></i> Comprar
+            </button>
         </div>
     </div>
 </div>
 
 
-    <footer>
-        <p>&copy; 2024 Sabor a Dufaur. Todos los derechos reservados.</p>
-        <div class="social-icons">
-            <a href="https://www.facebook.com/?ref=logo"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.whatsapp.com/?lang=es_LA"><i class="fab fa-whatsapp"></i></a>
-        </div>
-    </footer>
+</main>
+
+<div id="cart-modal" class="cart-modal">
+    <div class="cart-modal-content">
+        <h3>Tu Carrito</h3>
+        <ul id="cart-items"></ul>
+        <p id="cart-total">Total: $0</p>
+        
+        
+        <form action="https://formspree.io/f/mgvwjrpz" method="POST" class="contact-form">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre" required placeholder="Tu nombre">
+            </div>
+        
+            <div class="form-group">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" name="email" id="email" required placeholder="tu@email.com">
+            </div>
+        
+            <div class="form-group">
+                <label for="mensaje">Productos seleccionados:</label>
+                <textarea name="mensaje" id="mensaje" readonly></textarea>
+            </div>
+        
+            <button type="submit" class="submit-button">Enviar Pedido</button>
+        </form>
+        
+        <button id="close-cart">Cerrar</button>
+        
+
+       </div>
+
+</div>
+
+<footer>
+    <p>&copy; 2024 Sabor a Dufaur. Todos los derechos reservados.</p>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/?ref=logo"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.whatsapp.com/?lang=es_LA"><i class="fab fa-whatsapp"></i></a>
+    </div>
+</footer>
+
+<script src="script-duf.js"></script>
 </body>
 </html>

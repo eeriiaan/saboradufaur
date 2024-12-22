@@ -1,4 +1,3 @@
-/* Variables de color para facilitar cambios */
 :root {
     --color-primario: #004d00;
     --color-secundario: #ffcc00;
@@ -6,7 +5,6 @@
     --color-texto: #333;
 }
 
-/* General styles */
 * {
     margin: 0;
     padding: 0;
@@ -26,6 +24,13 @@ header {
     padding: 10px 0;
     color: #fff;
     text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
@@ -48,30 +53,27 @@ nav ul li a {
     text-decoration: none;
 }
 
-/* Estilo para el enlace activo */
 nav ul li a.active {
-    color: var(--color-secundario); /* Amarillo */
-    font-weight: bold; /* Opción para que se vea más destacado */
+    color: var(--color-secundario);
+    font-weight: bold;
 }
 
 .nosotros {
     text-align: center;
 }
 
-
 .hero {
     background: url('imagenes/pngtree-argentine-folklore-concept-mate-and-guitar-on-a-black-background-photo-photo-image_32189280.jpg') no-repeat center center/cover;
-    height: 30em; /* Ajusta la altura del contenedor en unidades em */
-    min-height: 15em; /* Establece una altura mínima en em para que no quede demasiado pequeño */
+    height: 30em;
+    min-height: 15em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
     text-align: center;
-    padding: 2em; /* Ajuste de padding en em */
+    padding: 2em;
 }
-
 
 .hero h2 {
     font-size: 3rem;
@@ -91,7 +93,6 @@ nav ul li a.active {
     background-color: #e6b800;
 }
 
-/* Productos */
 .productos {
     padding: 40px 20px;
     text-align: center;
@@ -138,7 +139,6 @@ nav ul li a.active {
     font-size: 1rem;
 }
 
-/* Botón Comprar */
 .product-item button {
     margin-top: auto;
     padding: 10px 20px;
@@ -155,7 +155,6 @@ nav ul li a.active {
     background-color: #003300;
 }
 
-/* Footer */
 footer {
     background-color: #333;
     color: white;
@@ -172,7 +171,6 @@ footer .social-icons img {
     width: 30px;
 }
 
-/* Media Queries */
 @media only screen and (max-width: 600px) {
     header h1 {
         font-size: 1.5rem;
@@ -200,7 +198,6 @@ footer .social-icons img {
     }
 }
 
-/* Estilo para las categorías */
 .category {
     margin-bottom: 40px;
     text-align: left;
@@ -225,146 +222,6 @@ footer .social-icons img {
     text-decoration: underline;
 }
 
-/* Estilos generales del grid de productos */
-.categorymates {
-    text-align: center;
-    margin: 20px auto;
-}
-
-.categorymates h3 {
-    font-size: 1.8em;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.product-grid {
-    display: flex;
-    gap: 20px; /* Espacio entre productos */
-    justify-content: center; /* Centrar productos */
-    flex-wrap: wrap;
-}
-
-.product-item {
-    flex: 1 1 200px; /* Tamaño fijo para cada tarjeta */
-    max-width: 200px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.product-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.product-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-}
-
-.product-item h4 {
-    font-size: 1.2em;
-    margin: 10px 0 5px;
-    color: #555;
-}
-
-.product-item p {
-    font-size: 1.1em;
-    color: #888;
-}
-
-.product-item button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-    font-size: 1em;
-    transition: background-color 0.3s ease;
-}
-
-.product-item button:hover {
-    background-color: #45a049;
-}
-
-
-@media (max-width: 768px) {
-    .grilla {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* Estilos para el título del formulario */
-.contacto {
-    max-width: 600px; /* Ancho máximo del formulario */
-    margin: 0 auto; /* Centrar el formulario */
-    padding: 20px; /* Espaciado interno */
-    background-color: #f9f9f9; /* Color de fondo */
-    border-radius: 10px; /* Esquinas redondeadas */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-}
-
-.contacto h2 {
-    text-align: center; /* Centrar el título */
-    color: #333; /* Color del texto */
-}
-
-.form-group {
-    margin-bottom: 15px; /* Espaciado entre grupos de formulario */
-}
-
-label {
-    display: block; /* Asegura que las etiquetas ocupen toda la línea */
-    margin-bottom: 5px; /* Espacio debajo de la etiqueta */
-    font-weight: bold; /* Negrita */
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-    width: 100%; /* Ancho completo */
-    padding: 10px; /* Espaciado interno */
-    border: 1px solid #ccc; /* Borde */
-    border-radius: 5px; /* Esquinas redondeadas */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    transition: border-color 0.3s; /* Transición al enfocar */
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-textarea:focus {
-    border-color: #004d00; /* Cambiar color del borde al enfocar */
-    outline: none; /* Sin contorno */
-}
-
-.submit-button {
-    background-color: #004d00; /* Color de fondo del botón */
-    color: white; /* Color del texto del botón */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Esquinas redondeadas */
-    padding: 10px 20px; /* Espaciado interno */
-    cursor: pointer; /* Cambia el cursor al pasar el ratón */
-    transition: background-color 0.3s; /* Transición suave */
-    width: 100%; /* Botón ocupa todo el ancho */
-}
-
-.submit-button:hover {
-    background-color: #005700; /* Cambia el color al pasar el ratón */
-}
-/*imagen sol*/
-.imagen-ancha {
-    width: 100%;
-    height: auto; /* Mantiene la proporción */
-}
-
-
-/* Sección de reseñas */
 .resenas {
     padding: 40px 20px;
     background-color: #f0f0f0;
@@ -377,7 +234,6 @@ textarea:focus {
     color: #333;
 }
 
-/* Configuración de la cuadrícula */
 .resenas-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -385,7 +241,6 @@ textarea:focus {
     margin-top: 20px;
 }
 
-/* Estilo de cada tarjeta de reseña */
 .resena-item {
     background-color: #fff;
     padding: 20px;
@@ -409,20 +264,19 @@ textarea:focus {
     font-weight: bold;
 }
 
-/* Sección del pueblo turístico */
 .puebloturistico {
     max-width: 800px;
-    margin: 40px auto; /* Más margen para separación del fondo */
+    margin: 40px auto;
     padding: 20px;
-    background-color: #ffffff; /* Fondo blanco para destacar como tarjeta */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más fuerte para efecto flotante */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para efecto hover */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .puebloturistico:hover {
-    transform: translateY(-10px); /* Efecto de elevación en hover */
-    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.3); /* Sombra más fuerte al hacer hover */
+    transform: translateY(-10px);
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.3);
 }
 
 .puebloturistico h2 {
@@ -439,16 +293,14 @@ textarea:focus {
     text-align: justify;
 }
 
-
-/* Estilos para la sección de imagen y mapa */
 .puebloimagen {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px; /* Espacio entre los cuadros, si lo deseas */
+    gap: 10px;
 }
 
 .card {
-    flex: 1 1 25%; /* Cada tarjeta ocupará un cuarto del ancho */
+    flex: 1 1 25%;
     box-sizing: border-box;
 }
 
@@ -459,55 +311,269 @@ textarea:focus {
     object-fit: cover;
 }
 
-
-.imagenguarda {
-    background-image: url('imagenes/guardapampa.webp');
-    background-repeat: repeat; /* Repite la imagen */
-    }
-
-    #gif-promocional {
-        text-align: center;
-        padding: 20px;
-    }
-    
-    #gif-promocional img {
-        width: 100%;
-        max-width: 600px; /* Limita el tamaño máximo del GIF */
-        height: auto; /* Mantiene la proporción del GIF */
-        border-radius: 8px; /* Bordes redondeados opcionales */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra opcional */
-    }
-    
-   .contacto-container {
+#cart-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
     display: flex;
     align-items: center;
-    gap: 20px;
+    cursor: pointer;
 }
 
-.contacto-imagen {
-    flex: 1;
+#cart-container i {
+    font-size: 24px;
+    color: #fffcfc;
 }
 
-.contacto-imagen img {
+#cart-count {
+    margin-left: 5px;
+    font-size: 14px;
+    color: white;
+    background: rgb(0, 0, 0);
+    border-radius: 50%;
+    padding: 2px 6px;
+}
+
+.cart-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
-
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
 }
 
-.contacto-formulario {
-    flex: 1;
-}
-
-.contacto h2 {
+.cart-modal-content {
+    background: rgb(144, 224, 148);
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 400px;
     text-align: center;
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#cart-items li {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#empty-cart,
+#close-cart {
+    margin: 10px;
+    padding: 10px 20px;
+    background: #d1ffd4;
+    color: rgb(0, 0, 0);
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#empty-cart:hover,
+#close-cart:hover {
+    background: #00b3aa;
+}
+
+#cart-total {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+}
+
+#cart-items li {
+    padding: 10px;
+    border-bottom: 1px solid #e4f0c4;
+}
+
+#cart-items button {
+    background-color: #34dba9;
+    color: rgb(0, 0, 0);
+    padding: 5px 10px;
+    border: 2px solid black;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#cart-items button:hover {
+    background-color: #43fde4;
+}
+
+@media screen and (max-width: 767px) {
+    .cart-modal-content {
+        width: 90%;
+        padding: 15px;
+    }
+
+    #close-cart {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    #cart-items {
+        max-height: 60vh;
+        overflow-y: auto;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .cart-modal-content {
+        width: 70%;
+        padding: 18px;
+    }
+
+    #close-cart {
+        font-size: 16px;
+    }
+}
+
+.cart-modal {
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.cart-modal.show {
+    opacity: 1;
+}
+
+#cart-items {
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.contact-form {
+    background-color: #e7f3c6;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #00ffea;
+    outline: none;
+}
+
+.contact-form label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+}
+
+.submit-button {
+    background-color: #15ff00;
+    color: rgb(0, 0, 0);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #00b33c;
+}
+
+#close-cart {
+    background-color: #e0e0e0;
+    color: black;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+#close-cart:hover {
+    background-color: #ccc;
+}
+
+#gif-promocional {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+#gif-promocional h2 {
+    font-size: 24px;
+    color: #333;
     margin-bottom: 20px;
 }
 
-.imagen-ancha{
+#gif-promocional img {
     display: block;
-    margin: 0 auto; /* Centra horizontalmente */
-    width: 50%; /* Ajustá el ancho según necesites */
-    height: auto; /* Mantiene la proporción */
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
 }
 
-/* Fin del CSS */
+.imagen-ancha {
+    display: block;
+    margin: 0 auto;
+    max-width: 50%;
+    height: auto;
+    max-height: 150px;
+    z-index: 1;
+}
+
+body {
+    margin-top: 200px;
+}
+
+#contacto\:1 {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 900px;
+}
+
+.imagenguarda {
+    background-image: url('imagenes/guardapampa.webp');
+    background-repeat: repeat;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex-grow: 1;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+}
+
+
